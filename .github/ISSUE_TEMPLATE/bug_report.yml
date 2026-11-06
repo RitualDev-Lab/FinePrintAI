@@ -1,0 +1,41 @@
+name: 🐛 Bug Report
+description: File a bug report for FinePrint AI CLI, PDF AST parser, or Python SDK
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting an issue! Please describe the problem clearly below.
+  - type: input
+    id: version
+    attributes:
+      label: FinePrint AI Version / Package
+      placeholder: e.g. fineprint CLI v0.1.0, or fineprint-0.1.0 on Python 3.11
+    validations:
+      required: true
+  - type: dropdown
+    id: contract_type
+    attributes:
+      label: Contract / Document Type
+      options:
+        - Non-Disclosure Agreement (NDA)
+        - Master Services Agreement (MSA)
+        - Commercial Real Estate Lease
+        - Software as a Service (SaaS) Agreement
+        - Employment / Contractor Agreement
+        - Other Document
+    validations:
+      required: true
+  - type: textarea
+    id: clause_snippet
+    attributes:
+      label: Problematic Clause Snippet (Redacted)
+      description: Provide the clause text that caused a false positive or parse failure (please do NOT paste sensitive real names).
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem Description
+      description: What happened? What did you expect to happen?
+    validations:
+      required: true

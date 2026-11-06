@@ -1,0 +1,28 @@
+name: 💡 Feature Request
+description: Propose a new legal playbook rule, document parser, or integration for FinePrint AI
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Share your ideas to improve FinePrint AI!
+  - type: input
+    id: feature_title
+    attributes:
+      label: Feature Summary
+      placeholder: e.g. Add GDPR Standard Contractual Clauses (SCC) playbook rules
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Legal / Workflow Use Case
+      description: Why would this rule or integration be valuable for your contract review process?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_amendment
+    attributes:
+      label: Proposed Rule Logic / Standard Wording
+      description: Describe the target clause or desired redline behavior.
+    validations:
+      false
