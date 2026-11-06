@@ -1,0 +1,80 @@
+name: "FinePrint AI Legal Contract & Redline Gate"
+description: "In-Memory Legal Contract, NDA & Lease Risk Scanner Gate scoring contracts A-F and generating redlines in CI/CD"
+author: "RitualDev Lab"
+
+branding:
+  icon: "file-text"
+  color: "yellow"
+
+inputs:
+  contract_path:
+    description: "Path to legal contract, lease, MSA, or NDA file to audit (markdown, text, or PDF)"
+    required: true
+    default: "contract.md"
+  fail_on_grade_f:
+    description: "Whether to fail CI step if contract receives an Unacceptable (Grade F) rating"
+    required: false
+    default: "true"
+  output_redline:
+    description: "Path to save generated side-by-side attorney redline amendments"
+    required: false
+    default: "redline.md"
+
+outputs:
+  grade:
+    description: "Overall risk grade assigned to agreement (A, B, C, D, or F)"
+    value: ${{ steps.scanner.outputs.grade }}
+  violations_count:
+    description: "Total number of uncapped indemnities or toxic clauses flagged"
+    value: ${{ steps.scanner.outputs.violations_count }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run FinePrint AI Legal Risk Scanner
+      id: scanner
+      shell: bash
+      env:
+        INPUT_CONTRACT: ${{ inputs.contract_path }}
+        INPUT_FAIL_GRADE_F: ${{ inputs.fail_on_grade_f }}
+        INPUT_OUT_REDLINE: ${{ inputs.output_redline }}
+      run: |
+        echo "📜 Executing FinePrint AI Legal Contract Risk Gate..."
+        pip install --quiet fineprint || npm install -g --silent @ritualdev/fineprint
+
+        python -c "
+        import os, sys
+        from fineprint import ContractScanner
+
+        doc_path = os.environ.get('INPUT_CONTRACT', 'contract.md')
+        if not os.path.exists(doc_path):
+            print(f'::warning::Contract file not found at {doc_path}, skipping audit.')
+            sys.exit(0)
+
+        with open(doc_path, 'r', encoding='utf-8', errors='ignore') as f:
+            text = f.read()
+
+        scanner = ContractScanner()
+        report = scanner.analyze_text(text)
+        grade = report.get('grade', 'C')
+        violations = report.get('violations', [])
+
+        print(f'::notice::FinePrint AI Contract Risk Grade: {grade} | Flagged Issues: {len(violations)}')
+
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as gh_out:
+            gh_out.write(f'grade={grade}\n')
+            gh_out.write(f'violations_count={len(violations)}\n')
+
+        # Save redlines
+        out_redline = os.environ.get('INPUT_OUT_REDLINE', 'redline.md')
+        with open(out_redline, 'w', encoding='utf-8') as f:
+            f.write(f'# FinePrint AI Redline Report\n\n**Overall Grade**: {grade}\n\n')
+            for v in violations:
+                f.write(f'### [{v.get(\"category\")}] - Severity: {v.get(\"severity\")}\n')
+                f.write(f'- **Issue**: {v.get(\"explanation\")}\n')
+                f.write(f'- **Proposed Redline**: {v.get(\"recommended_clause\")}\n\n')
+
+        if grade == 'F' and os.environ.get('INPUT_FAIL_GRADE_F', 'true').lower() == 'true':
+            print('::error::Contract scored Grade F (Unacceptable). Execution blocked!')
+            sys.exit(1)
+        "
