@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # 📜 FinePrint AI
 ### In-Memory Contract, Lease & NDA Scanner & Redline Generator
@@ -7,7 +7,8 @@
 [![CLI Tool](https://img.shields.io/badge/CLI-fineprint-black?logo=gnubash)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
 [![Python SDK](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
 [![NPM Package](https://img.shields.io/badge/NPM-@ritualdev/fineprint-red?logo=npm)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
-[![License](https://img.shields.io/badge/License-Proprietary%20/%20Community-orange)](./LICENSE)
+[[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor-Dodo%20Payments-8b5cf6?style=flat-square&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
+![License](https://img.shields.io/badge/License-Proprietary%20/%20Community-orange)](./LICENSE)
 [![Zero VPS Cost](https://img.shields.io/badge/Cloud_Cost-$0.00/mo-success)](https://fineprint.io)
 
 **FinePrint AI** is an in-memory, privacy-preserving legal contract auditor and redline synthesizer. Equipped with **60+ heuristic legal risk signatures**, an **in-memory PDF AST parser**, and **Gemini 1.5 Flash**, FinePrint scans Master Services Agreements (MSAs), NDAs, commercial leases, and vendor terms to grade contract risk from **A (Acceptable)** to **F (Unacceptable)** and generate attorney-grade redline amendments in seconds with zero cloud server overhead ($0 VPS).
@@ -165,6 +166,26 @@ console.log(`Flagged ${audit.redlines.length} high-risk provisions.`);
 * **Test Verification**: **50 / 50 passing tests** across Node.js, AST parsers, and Python 3.8+.
 
 ---
+
+---
+
+## 💖 Sponsor & Support via Dodo Payments
+
+FinePrint AI is engineered by RitualDev Lab. Your sponsorship directly finances our in-memory PDF AST parsing engine, zero-gotcha legal heuristic models, and privacy compliance test suites.
+
+<div align="center">
+
+[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor_via_Dodo-Payments-8b5cf6?style=for-the-badge&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
+[![Interactive Donation Portal](https://img.shields.io/badge/Donation_Portal-Cards%20%7C%20UPI%20%7C%20Apple%20Pay-ff5964?style=for-the-badge&logo=heart&logoColor=white)](https://ritualdev.in/donate)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-RitualDev--Lab-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/RitualDev-Lab)
+
+<br/>
+
+[**⚡ 1-Click Dodo Payments Checkout**](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva) &nbsp;•&nbsp; [**🎁 Interactive Donation Form (USD & INR UPI)**](https://ritualdev.in/donate) &nbsp;•&nbsp; [**❤️ GitHub Sponsors**](https://github.com/sponsors/RitualDev-Lab)
+
+<sub>🔒 *Zero physical shipping required. Powered by Dodo Payments (Merchant of Record) with instant tax invoice and global payment methods (Cards, UPI, Apple Pay).*</sub>
+
+</div>
 
 ## 🤝 Community & Support
 
