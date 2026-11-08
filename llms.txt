@@ -1,0 +1,18 @@
+# FinePrintAI
+
+> In-memory legal contract, lease, and NDA scanner evaluating 60+ legal rules with $0 cloud infrastructure cost.
+
+Maintained by RitualDev Lab (https://ritualdev.in).
+
+## Official Web Application
+Live In-Browser Playground: https://ritualdev.in/fineprint
+
+## Key Features
+- **100% Client-Side Evaluation**: Instant contract audit without uploading confidential legal agreements to external cloud servers.
+- **60+ Legal Risk Rules**: Flags uncapped liability, non-compete overreach, perpetual IP assignment, automatic renewals, and unilateral amendment clauses.
+- **Automated Redlining**: Generates protective amendment language to balance one-sided agreements.
+
+## Quickstart
+```bash
+npx @ritualdev/fineprint-ai scan contract.pdf
+```
