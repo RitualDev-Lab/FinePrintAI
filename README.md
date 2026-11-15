@@ -169,21 +169,44 @@ console.log(`Flagged ${audit.redlines.length} high-risk provisions.`);
 
 ---
 
-## 💖 Sponsor & Support via Dodo Payments
+## 🏢 Enterprise Commercial Edition & FinePrintAI-Core
+
+| Feature | Community Scanner ($0 Free) | FinePrintAI-Core Corporate ($79/mo) |
+| :--- | :---: | :---: |
+| **PDF Agreement Scanning** | ✅ 40-page PDFs (<1.2s) | ✅ Unlimited Contract Analysis |
+| **Heuristic Risk Detection** | ✅ Standard 60+ Rules | ✅ 180+ Enterprise Corporate Playbook Rules |
+| **EU AI Act & DPDP Conformity** | ❌ None | ✅ Automated EU AI Act Risk Tiering & DPDP Checklist |
+| **Automated Contract Redlines** | ❌ Standard Report | ✅ Tracked DOCX / Markdown Counter-Draft Generation |
+| **e-Signature Interceptor** | ❌ Manual | ✅ Live DocuSign, PandaDoc, and Adobe Sign Webhooks |
+| **Bulk Legacy Scanning** | ❌ Single File | ✅ AWS S3 & Google Drive Mass Contract Auditor |
+| **Collaborator Git Access** | ❌ Public Repo | ✅ Instant GitHub Invite to `RitualDev-Lab/FinePrintAI-Core` |
+
+<div align="center">
+
+[![Subscribe to FinePrintAI-Core](https://img.shields.io/badge/Subscribe_to_FinePrintAI--Core-$79%2Fmo-00F59B?style=for-the-badge&logo=shield&logoColor=black)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva?quantity=1&paymentAmount=79&amount=79&currency=USD&metadata_tier=fineprint_pro_79&metadata_coreRepo=RitualDev-Lab%2FFinePrintAI-Core&redirect_url=https%3A%2F%2Fritualdev.in%2Fpricing%2Fsuccess%2F%3Fproduct%3Dfineprint_pro_79)
+
+[**⚡ Subscribe to FinePrintAI-Core ($79/mo) & Unlock Private Repo Access Instantly**](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva?quantity=1&paymentAmount=79&amount=79&currency=USD&metadata_tier=fineprint_pro_79&metadata_coreRepo=RitualDev-Lab%2FFinePrintAI-Core&redirect_url=https%3A%2F%2Fritualdev.in%2Fpricing%2Fsuccess%2F%3Fproduct%3Dfineprint_pro_79)
+
+<sub>🔒 *Automated GitHub Fulfillment: Enter your GitHub username during checkout. Our webhook immediately dispatches a collaborator invite to `FinePrintAI-Core`.*</sub>
+
+</div>
+
+---
+
+## 💖 Community Support & Alternative Sponsorship
 
 FinePrint AI is engineered by RitualDev Lab. Your sponsorship directly finances our in-memory PDF AST parsing engine, zero-gotcha legal heuristic models, and privacy compliance test suites.
 
 <div align="center">
 
-[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor_via_Dodo-Payments-8b5cf6?style=for-the-badge&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
 [![Interactive Donation Portal](https://img.shields.io/badge/Donation_Portal-Cards%20%7C%20UPI%20%7C%20Apple%20Pay-ff5964?style=for-the-badge&logo=heart&logoColor=white)](https://ritualdev.in/donate)
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-RitualDev--Lab-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/RitualDev-Lab)
 
 <br/>
 
-[**⚡ 1-Click Dodo Payments Checkout**](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva) &nbsp;•&nbsp; [**🎁 Interactive Donation Form (USD & INR UPI)**](https://ritualdev.in/donate) &nbsp;•&nbsp; [**❤️ GitHub Sponsors**](https://github.com/sponsors/RitualDev-Lab)
+[**🎁 Interactive Donation Form (USD & INR UPI)**](https://ritualdev.in/donate) &nbsp;•&nbsp; [**❤️ GitHub Sponsors**](https://github.com/sponsors/RitualDev-Lab)
 
-<sub>🔒 *Zero physical shipping required. Powered by Dodo Payments (Merchant of Record) with instant tax invoice and global payment methods (Cards, UPI, Apple Pay).*</sub>
+<sub>🔒 *Powered by Dodo Payments (Merchant of Record) with instant tax invoice and global payment methods (Cards, UPI, Apple Pay).*</sub>
 
 </div>
 
