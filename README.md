@@ -6,12 +6,12 @@
 [![GitHub Release](https://img.shields.io/github/v/release/RitualDev-Lab/FinePrintAI?color=blue&label=Release&logo=github)](https://github.com/RitualDev-Lab/FinePrintAI/releases/latest)
 [![CLI Tool](https://img.shields.io/badge/CLI-fineprint-black?logo=gnubash)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
 [![Python SDK](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
-[![NPM Package](https://img.shields.io/badge/NPM-@ritualdev/fineprint-red?logo=npm)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
+[![NPM Package](https://img.shields.io/badge/NPM-@ritualdev--lab/fineprint-red?logo=npm)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
 [[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor-Dodo%20Payments-8b5cf6?style=flat-square&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
 ![License](https://img.shields.io/badge/License-Proprietary%20/%20Community-orange)](./LICENSE)
 [![Zero VPS Cost](https://img.shields.io/badge/Cloud_Cost-$0.00/mo-success)](https://fineprint.io)
 
-**FinePrint AI** is an in-memory, privacy-preserving legal contract auditor and redline synthesizer. Equipped with **60+ heuristic legal risk signatures**, an **in-memory PDF AST parser**, and **Gemini 1.5 Flash**, FinePrint scans Master Services Agreements (MSAs), NDAs, commercial leases, and vendor terms to grade contract risk from **A (Acceptable)** to **F (Unacceptable)** and generate attorney-grade redline amendments in seconds with zero cloud server overhead ($0 VPS).
+**FinePrint AI** is an in-memory legal contract auditor and redline synthesizer. Run with `--offline` for **100% local zero-network execution** using an **in-memory PDF AST parser** and **60+ deterministic legal risk rules**, or opt into **Google Gemini 1.5 Flash cloud API inference** (by explicitly supplying `GEMINI_API_KEY`) to synthesize deep contextual redlines for MSAs, NDAs, commercial leases, and SaaS terms.
 
 [Download Release](https://github.com/RitualDev-Lab/FinePrintAI/releases/latest) • [CLI Quickstart](#-cli-quickstart) • [Python SDK](#-python-sdk-quickstart) • [Architecture](#-architecture) • [Risk Categories](#-60-legal-risk-categories) • [Enterprise Features](#-enterprise-features) • [Examples](./examples)
 
@@ -93,7 +93,7 @@ flowchart TD
 Download the pre-compiled binary from [Latest Releases](https://github.com/RitualDev-Lab/FinePrintAI/releases/latest) or install via npm:
 
 ```bash
-npm install -g @ritualdev/fineprint
+npm install -g @ritualdev-lab/fineprint
 ```
 
 Run an automated audit on any contract or lease:
@@ -135,11 +135,11 @@ See [examples/audit_contract.py](./examples/audit_contract.py) for a complete ru
 ### 3. Node.js / TypeScript SDK
 
 ```bash
-npm install @ritualdev/fineprint
+npm install @ritualdev-lab/fineprint
 ```
 
 ```typescript
-import { ContractAnalyzer } from '@ritualdev/fineprint';
+import { ContractAnalyzer } from '@ritualdev-lab/fineprint';
 
 const analyzer = new ContractAnalyzer();
 const audit = await analyzer.auditFile('./vendor-agreement.pdf');
