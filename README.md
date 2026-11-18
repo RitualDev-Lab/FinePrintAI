@@ -11,7 +11,7 @@
 ![License](https://img.shields.io/badge/License-Proprietary%20/%20Community-orange)](./LICENSE)
 [![Zero VPS Cost](https://img.shields.io/badge/Cloud_Cost-$0.00/mo-success)](https://fineprint.io)
 
-**FinePrint AI** is an in-memory legal contract auditor and redline synthesizer. Run with `--offline` for **100% local zero-network execution** using an **in-memory PDF AST parser** and **60+ deterministic legal risk rules**, or opt into **Google Gemini 1.5 Flash cloud API inference** (by explicitly supplying `GEMINI_API_KEY`) to synthesize deep contextual redlines for MSAs, NDAs, commercial leases, and SaaS terms.
+**FinePrint AI** is an **air-gapped-by-default** in-memory legal contract auditor and redline synthesizer. By default, every scan executes **100% locally with zero outbound network requests** using an **in-memory PDF AST parser** and **60+ deterministic legal risk rules**. Optional **Google Gemini 1.5 Flash cloud inference** is strictly disabled unless you explicitly pass `--allow-cloud-egress` (or `FINEPRINT_ALLOW_CLOUD_EGRESS=1`) alongside `GEMINI_API_KEY`.
 
 [Download Release](https://github.com/RitualDev-Lab/FinePrintAI/releases/latest) • [CLI Quickstart](#-cli-quickstart) • [Python SDK](#-python-sdk-quickstart) • [Architecture](#-architecture) • [Risk Categories](#-60-legal-risk-categories) • [Enterprise Features](#-enterprise-features) • [Examples](./examples)
 
