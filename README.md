@@ -7,9 +7,9 @@
 [![CLI Tool](https://img.shields.io/badge/CLI-fineprint-black?logo=gnubash)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
 [![Python SDK](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
 [![NPM Package](https://img.shields.io/badge/NPM-@ritualdev--lab/fineprint-red?logo=npm)](https://github.com/RitualDev-Lab/FinePrintAI/releases)
-[[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor-Dodo%20Payments-8b5cf6?style=flat-square&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
-![License](https://img.shields.io/badge/License-Proprietary%20/%20Community-orange)](./LICENSE)
-[![Zero VPS Cost](https://img.shields.io/badge/Cloud_Cost-$0.00/mo-success)](https://fineprint.io)
+[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor-Dodo%20Payments-8b5cf6?style=flat-square&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
+[![License](https://img.shields.io/badge/License-Proprietary%20/%20Community-orange)](./LICENSE)
+[![Zero VPS Cost](https://img.shields.io/badge/Cloud_Cost-$0.00/mo-success)](https://ritualdev.in/fineprint)
 
 **FinePrint AI** is an **air-gapped-by-default** in-memory legal contract auditor and redline synthesizer. By default, every scan executes **100% locally with zero outbound network requests** using an **in-memory PDF AST parser** and **60+ deterministic legal risk rules**. Optional **Google Gemini 1.5 Flash cloud inference** is strictly disabled unless you explicitly pass `--allow-cloud-egress` (or `FINEPRINT_ALLOW_CLOUD_EGRESS=1`) alongside `GEMINI_API_KEY`.
 
@@ -59,7 +59,7 @@ flowchart TD
         WebhookAlert["Approval / Signing Gate Lock Event"]
     end
 
-    subgraph ZeroCostEdge["Serverless Edge (api.fineprint.io)"]
+    subgraph ZeroCostEdge["RitualDev Portal (ritualdev.in/fineprint)"]
         CFWorkers["Cloudflare Workers (DocuSign / GitHub PR Webhook Interceptor)"]
     end
 
@@ -109,7 +109,7 @@ fineprint score ./examples/sample_vendor_agreement.md --json
 
 ---
 
-### 2. Python SDK Quickstart (`pip install fineprint`)
+### 2. Python SDK Quickstart (`pip install fineprint-defense` — GitHub Releases / Core)
 
 Ideal for legal tech engineering, DocuSign webhooks, and contract data pipelines:
 
@@ -160,7 +160,7 @@ console.log(`Flagged ${audit.redlines.length} high-risk provisions.`);
 
 ## 📊 Performance Benchmarks
 
-* **Analysis Latency**: $< 1.2\text{ seconds}$ on 40-page commercial PDF agreements.
+* **Analysis Latency**: < 1.2 seconds on 40-page commercial PDF agreements.
 * **Privacy**: **100% in-memory processing**; zero persistent document storage.
 * **Infrastructure Cost**: **$0.00 / month** ($0 VPS, $0 server maintenance).
 * **Test Verification**: **50 / 50 passing tests** across Node.js, AST parsers, and Python 3.8+.
